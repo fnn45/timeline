@@ -1,0 +1,8 @@
+aiohttp
+pytz
+bcrypt
+aiohttp_security
+trafaret
+aiohttp_jinja2
+pyyaml
+motor
