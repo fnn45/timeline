@@ -1,0 +1,27 @@
+<!doctype html>
+<title>{% block title %}Welcome{% endblock %}</title>
+<link rel=stylesheet type=text/css href="{{ url('static', filename='css/style.css') }}">
+<div class=page>
+    <div class="wrapper">
+        <img src="{{ url('static', filename='img/icon.png')  }}" class="slow-rotation">
+        <h1>TimeLine</h1>
+    </div>
+
+  <div class=navigation>
+  {% if user and user.username  %}
+    <a href="{{ url('timeline') }}">my timeline</a> |
+    <a href="{{ url('public_timeline') }}">public timeline</a> |
+    <a href="{{ url('logout') }}">logout [{{ user.username }}]</a>
+  {% else %}
+    <a href="{{ url('public_timeline') }}">public timeline</a> |
+    <a href="{{ url('register') }}">register</a> |
+    <a href="{{ url('login') }}">login in</a>
+  {% endif %}
+  </div>
+  <div class=body>
+  {% block body %}{% endblock %}
+  </div>
+  <div class=footer>
+    aiohttp application
+  </div>
+</div>

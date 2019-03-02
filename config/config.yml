@@ -1,0 +1,7 @@
+mongo:
+  host: mongodb://fnn45:fnn4512345@ds249079.mlab.com:49079/timeline
+  database: timeline
+  max_pool_size: 5
+
+host: 127.0.0.1
+port: 9001
