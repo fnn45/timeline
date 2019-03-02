@@ -59,7 +59,7 @@ def main():
 
     loop = asyncio.get_event_loop()
     app, host, port = loop.run_until_complete(init(loop))
-    web.run_app(app, host=host, port=os.environ.get('PORT', port))
+    web.run_app(app, port=os.environ.get('PORT', port))
 
 
 if __name__ == '__main__':
