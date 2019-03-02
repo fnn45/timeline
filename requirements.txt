@@ -6,3 +6,4 @@ trafaret
 aiohttp_jinja2
 pyyaml
 motor
+python-dateutil
